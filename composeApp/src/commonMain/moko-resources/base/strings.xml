@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">Commercial Rooms</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+
+
+
+    <string name="preview">Preview</string>
+    <string name="more_details">More Details</string>
+    <string name="welcome_back_user">Welcome back,\n %1$s</string>
+    <string name="amount_egp">%1$s EGP</string>
+    <string name="choose_unit">Choose the unit</string>
+    <string name="service_type">Service Type</string>
+    <string name="registration">Registration</string>
+    <string name="total">Total</string>
+    <string name="skip">Skip</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="flat_number">Flat number</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="login">Log in</string>
+    <string name="register">Register</string>
+    <string name="by_signing_up_you_agree_to_our">By signing up, you agreed with our terms of Services and Privacy Policy</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="register_success">Registration Successful</string>
+    <string name="not_registered">Not Registered?</string>
+    <string name="available_units">Models</string>
+    <string name="home">Home</string>
+    <string name="logout">Logout</string>
+    <string name="projects">Projects</string>
+    <string name="language">Language</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="about_us">About Us</string>
+    <string name="saved">Saved</string>
+    <string name="services">Services</string>
+    <string name="activities">Activities</string>
+    <string name="payments">Payments</string>
+    <string name="add_referral">Add Referral</string>
+    <string name="submit_request">Submit Request</string>
+    <string name="announcements">Announcements</string>
+    <string name="invite_friends">Invite Friends</string>
+    <string name="cctv_monitoring">CCTV Monitoring</string>
+    <string name="services_history">Services History</string>
+    <string name="activities_history">Activities History</string>
+    <string name="invitations_history">Invitations History</string>
+    <string name="referral_history">Referral History</string>
+    <string name="choose_history_services">Choose History Services</string>
+    <string name="all">All</string>
+    <string name="confirmed">Confirmed</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="pending">Pending</string>
+    <string name="change_language">Change Language</string>
+    <string name="our_mission">Our Mission</string>
+    <string name="our_vision">Our Vision</string>
+    <string name="submit">Submit</string>
+    <string name="name">Name</string>
+    <string name="message">Message</string>
+    <string name="working_hours">Working Hours</string>
+    <string name="working_hours_from">Working Hours From</string>
+    <string name="working_hours_to">Working Hours To</string>
+    <string name="max_reserved_hours">Max Hours</string>
+    <string name="preregister_period_hours">Preregister Period</string>
+    <string name="notes">Notes</string>
+    <string name="date">Date</string>
+    <string name="add_image">Add Image</string>
+    <string name="reservation">Reservation</string>
+    <string name="reserve">Reserve</string>
+    <string name="hours">Hours</string>
+    <string name="payment_methods">Payment Methods</string>
+    <string name="cash">Cash</string>
+    <string name="visa">Visa</string>
+    <string name="invitations_count">Invitations Count</string>
+    <string name="everyone">Everyone</string>
+    <string name="membership">Membership</string>
+    <string name="only_me">Only Me</string>
+    <string name="share">Share</string>
+    <string name="unit">Unit</string>
+    <string name="from">From</string>
+    <string name="to_word">To</string>
+    <string name="invite">Invite</string>
+    <string name="email">Email</string>
+    <string name="more">More</string>
+    <string name="contact">Contact</string>
+    <string name="invalid_password">Invalid Password</string>
+    <string name="credentials_expired">Expired Credentials</string>
+    <string name="invalid_credentials">Invalid Credentials</string>
+    <string name="unknown_error">Unknown Error</string>
+    <string name="session_expired">Session Expired</string>
+    <string name="your_session_has_been_expired_message">Your session has expired. Please log in again to continue.</string>
+    <string name="about_us_desc">Prime Developments is one of the leading companies in the field of real estate development in Egypt and has
+        swiftly made a name for itself by creating distinctive projects that feature exquisite designs, prime locations, excellent value,
+        and exceptional services. The company has an ambitious strategic plan based on commitment and credibility to meet the requirements
+        of its customers and craft each project to be a unique and luxurious work of art 4444
+    </string>
+    <string name="mission_desc">We aim to provide tailored, innovative, and creative solutions to ensure the best possible outcome is
+        achieved. To continue to be a world-class and pioneering development company. In addition, we strive to exceed our customers’
+        expectations through superior-quality construction. All through transparency, improvised specifications, timely delivery, and the
+        utmost degree of professionalism.
+    </string>
+    <string name="vision_decs">Our vision is to achieve the diversity that customers constantly search for. Create a long-term bond with our
+        customers that lasts a lifetime, expand the diversity of our projects, and provide our customers with their desired needs.
+    </string>
+    <string name="orderNumber">Order No.</string>
+    <string name="this_field_required">This Field is required</string>
+    <string name="submit_success">Request Submitted successfully</string>
+    <string name="no_hours_available">No Hours Available</string>
+    <string name="status">Status</string>
+    <string name="accepted">Accepted</string>
+    <string name="rejected">Rejected</string>
+    <string name="price_per_hour">Price Per hour</string>
+    <string name="update">Update</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="invitations_count_error">Invitations count must be more than zero</string>
+    <string name="update_success">Updated successfully</string>
+    <string name="booking_request_please_wait">We're processing your request please wait</string>
+    <string name="payment_method">Payment method</string>
+    <string name="request_service">Request Service</string>
+
+
+</resources>
