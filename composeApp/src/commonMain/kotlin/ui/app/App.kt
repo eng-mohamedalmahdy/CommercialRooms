@@ -32,13 +32,16 @@ import coil3.svg.SvgDecoder
 import dev.icerock.moko.resources.desc.StringDesc
 import di.multithreadingModule
 import di.repositoryModule
+import di.settingsModule
 import di.useCaseModule
+import di.viewModelModule
 import domain.entity.DomainAppLanguage
 import domain.entity.error.DomainError
 import domain.entity.error.DomainNetworkError
 import framework.PushNotificationsKit
 import io.github.aakira.napier.Napier
 import kotlinx.coroutines.launch
+import org.koin.compose.KoinApplication
 import org.koin.compose.KoinContext
 import org.koin.compose.viewmodel.koinViewModel
 import org.koin.mp.KoinPlatform
@@ -67,13 +70,15 @@ fun App() {
     PushNotificationsKit.initNotificationListener(coroutineScope)
 
 
-    KoinContext(
-        KoinPlatform.getKoin().apply {
-            loadModules(
+    KoinApplication(
+        application = {
+            modules(
                 listOf(
                     repositoryModule,
                     useCaseModule,
                     multithreadingModule,
+                    viewModelModule,
+                    settingsModule
                 )
             )
         }
@@ -103,7 +108,8 @@ fun App() {
                             val action = it.visuals.actionLabel?.asSnakeBarAction()
                             val snackColor = action?.color
                             Snackbar(
-                                containerColor = snackColor ?: MaterialTheme.colorScheme.onBackground
+                                containerColor = snackColor
+                                    ?: MaterialTheme.colorScheme.onBackground
                             ) {
                                 Text(
                                     it.visuals.message,

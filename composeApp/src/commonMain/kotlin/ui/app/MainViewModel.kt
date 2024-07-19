@@ -16,7 +16,7 @@ class MainViewModel(
     private val setLanguageUseCase: SetLanguageUseCase,
 ) : ViewModel() {
 
-    private val currentLanguage = KoinPlatform.getKoin().get<DomainAppLanguage>(named(DIConstants.LANG_CODE))
+    private val currentLanguage = KoinPlatform.getKoin().get<DomainAppLanguage>()
     private val _currentLanguageFlow = MutableStateFlow(currentLanguage)
     val currentLanguageFlow = _currentLanguageFlow.asStateFlow()
 

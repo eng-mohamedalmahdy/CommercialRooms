@@ -91,11 +91,10 @@ fun NavigationHostPage() {
         ) {
 
             AnimatedContent(tabsStack.lastOrNull()) {
-                tabsStack.last().screen(isUserSignedIn)?.let { it1 ->
-                    Navigator(it1) {
-                        localNavigator = it
-                        CurrentScreen()
-                    }
+
+                Navigator(tabsStack.last().screen(isUserSignedIn)) {
+                    localNavigator = it
+                    CurrentScreen()
                 }
             }
         }
@@ -112,7 +111,12 @@ private fun NavigationHostPageStateless(
 ) {
     Box(Modifier.fillMaxSize()) {
         content()
-        BottomNavigationBar(tabs, selectedTab, modifier = Modifier.align(Alignment.BottomCenter), onTabSelected)
+        BottomNavigationBar(
+            tabs,
+            selectedTab,
+            modifier = Modifier.align(Alignment.BottomCenter),
+            onTabSelected
+        )
     }
 
 }

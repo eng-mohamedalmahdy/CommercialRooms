@@ -2,12 +2,13 @@
     <string name="app_name">Commercial Rooms</string>
     <string name="cancel">Cancel</string>
     <string name="confirm">Confirm</string>
-
+    <string name="ad_here">Ad Here</string>
+    <string name="sign_up_to_enjoy">Sign up Now! to benefit from all of our services</string>
 
 
     <string name="preview">Preview</string>
     <string name="more_details">More Details</string>
-    <string name="welcome_back_user">Welcome back,\n %1$s</string>
+    <string name="welcome_back_user">Welcome back,\n%1$s</string>
     <string name="amount_egp">%1$s EGP</string>
     <string name="choose_unit">Choose the unit</string>
     <string name="service_type">Service Type</string>

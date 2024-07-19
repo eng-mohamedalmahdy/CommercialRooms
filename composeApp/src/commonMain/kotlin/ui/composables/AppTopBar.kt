@@ -22,7 +22,7 @@ import androidx.compose.ui.unit.dp
 import ui.config.AppIcons
 
 @Composable
-fun TopAppBar(
+fun AppTopBar(
     modifier: Modifier = Modifier,
     leadingTitle: String? = null,
     trailingComponent: @Composable (() -> Unit)? = null,
@@ -31,7 +31,7 @@ fun TopAppBar(
 ) {
     val layoutDirection = LocalLayoutDirection.current
     Row(
-        modifier.padding(24.dp),
+        modifier.padding(horizontal = 24.dp, vertical = 16.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         onBackPress?.let {

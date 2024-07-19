@@ -2,12 +2,13 @@
     <string name="app_name">الغرف التجارية</string>
     <string name="confirm">تأكيد</string>
     <string name="cancel">إلغاء</string>
-
+    <string name="ad_here">ضع اعلانك هنا</string>
+    <string name="sign_up_to_enjoy">سجل الآن! لكي تستفيد بجميع خدماتنا قم بانشاء حساب خاص بك</string>
 
 
     <string name="preview">عرض</string>
     <string name="more_details">المزيد من التفاصيل</string>
-    <string name="welcome_back_user">أهلا بعودتك,\n %1$s</string>
+    <string name="welcome_back_user">أهلا بعودتك,\n%1$s</string>
     <string name="amount_egp">%1$s جم</string>
     <string name="choose_unit">أختر الوحدة</string>
     <string name="service_type">نوع الخدمة</string>
