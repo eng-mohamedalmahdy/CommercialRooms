@@ -1,6 +1,7 @@
 package ui.pages.services
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -22,19 +23,24 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
+import cafe.adriel.voyager.navigator.LocalNavigator
+import cafe.adriel.voyager.navigator.currentOrThrow
 import com.lightfeather.commercialrooms.MR
 import dev.icerock.moko.resources.compose.stringResource
 import ui.composables.AppTopBar
 import ui.composables.RegularAppTabRow
 import ui.composables.ServiceCard
 import ui.entity.UiService
+import ui.entity.UiText
+import ui.pages.signin.SignInPageScreen
 
 @Composable
 fun ServicesPage() {
+    val navigator = LocalNavigator.currentOrThrow
     var selectedService by remember { mutableStateOf(AppServices.DigitalServices) }
     val dummyServices by remember {
         mutableStateOf(List(10) {
-            UiService(it.toString(), "Service #$it", it.toString())
+            UiService(it.toString(), "خدمة #$it", it.toString())
         })
     }
     LazyVerticalGrid(
@@ -45,7 +51,7 @@ fun ServicesPage() {
             span = { GridItemSpan(3) }
         ) {
             AppTopBar(
-                leadingTitle = stringResource(MR.strings.welcome_back_user, "User"),
+                leadingTitle = stringResource(MR.strings.welcome_back_user, ""),
             )
         }
         item(
@@ -54,13 +60,18 @@ fun ServicesPage() {
             Spacer(Modifier.height(16.dp))
             RegularAppTabRow(
                 AppServices.entries,
-                AppServices.entries.map { it.name },
+                AppServices.entries.map { it.localizedName },
                 selectedService,
                 onTabClick = { selectedService = it }
             )
         }
         items(dummyServices) {
-            ServiceCard(it)
+            ServiceCard(
+                it,
+                modifier = Modifier.clickable {
+                    navigator.push(SignInPageScreen)
+                }
+            )
         }
         item(span = { GridItemSpan(3) }) {
             Spacer(Modifier.height(150.dp))
@@ -79,3 +90,11 @@ object ServicesPageScreen : Screen {
 enum class AppServices {
     DigitalServices, PublicServices
 }
+
+val AppServices.localizedName
+    get() = when (this) {
+        AppServices.DigitalServices -> MR.strings.digital_services
+        AppServices.PublicServices -> MR.strings.public_services
+    }.let { UiText.StringResource(it).asString() }
+
+

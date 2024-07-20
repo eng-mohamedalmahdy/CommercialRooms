@@ -42,7 +42,7 @@ fun MorePage() {
         item(span = { GridItemSpan(3) }) {
             Column(Modifier.padding(vertical = 8.dp)) {
                 AppTopBar(
-                    leadingTitle = stringResource(MR.strings.welcome_back_user, "User")
+                    leadingTitle = stringResource(MR.strings.welcome_back_user, "")
                 )
                 SignUpSuggestionCard {
                     navigator.push(SignInPageScreen)

@@ -4,6 +4,13 @@
     <string name="cancel">إلغاء</string>
     <string name="ad_here">ضع اعلانك هنا</string>
     <string name="sign_up_to_enjoy">سجل الآن! لكي تستفيد بجميع خدماتنا قم بانشاء حساب خاص بك</string>
+    <string name="digital_services">الخدمات الإلكترونية</string>
+    <string name="public_services">الخدمات العامة</string>
+    <string name="latest">الأحدث</string>
+    <string name="events">الفعاليات</string>
+    <string name="lens">عدسة</string>
+    <string name="conferences">المؤتمرات</string>
+
 
 
     <string name="preview">عرض</string>

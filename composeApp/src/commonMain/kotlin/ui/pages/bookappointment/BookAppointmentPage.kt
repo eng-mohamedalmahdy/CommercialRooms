@@ -20,6 +20,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.key.Key.Companion.M
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
@@ -69,7 +70,7 @@ fun BookAppointmentPage() {
             Modifier.fillMaxSize().verticalScroll(rememberScrollState())
         ) {
             AppTopBar(
-                leadingTitle = "Book Appointment",
+                leadingTitle = "حجز موعد",
                 onBackPress = navigation::pop
             )
 
@@ -123,7 +124,7 @@ fun BookAppointmentPage() {
             }
             Spacer(Modifier.height(8.dp))
             AppFilledButton(
-                "Send", onClick = {
+                stringResource(MR.strings.confirm), onClick = {
 
                 },
                 modifier = Modifier.align(Alignment.CenterHorizontally)

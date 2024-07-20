@@ -44,6 +44,7 @@ import kotlinx.coroutines.launch
 import org.koin.compose.KoinApplication
 import org.koin.compose.KoinContext
 import org.koin.compose.viewmodel.koinViewModel
+import org.koin.core.context.loadKoinModules
 import org.koin.mp.KoinPlatform
 import ui.config.AppTheme
 import ui.error.asUiText
@@ -70,9 +71,9 @@ fun App() {
     PushNotificationsKit.initNotificationListener(coroutineScope)
 
 
-    KoinApplication(
-        application = {
-            modules(
+    KoinContext(
+        KoinPlatform.getKoin().apply {
+            loadKoinModules(
                 listOf(
                     repositoryModule,
                     useCaseModule,
@@ -85,10 +86,9 @@ fun App() {
     ) {
         val mainViewModel = koinViewModel<MainViewModel>()
         val language by mainViewModel.currentLanguageFlow.collectAsState()
-
+        StringDesc.localeType = StringDesc.LocaleType.Custom(DomainAppLanguage.default.code)
         LaunchedEffect(language) {
-            StringDesc.localeType = StringDesc.LocaleType.Custom(language.code)
-            Napier.i("Language changed to $language")
+            StringDesc.localeType = StringDesc.LocaleType.Custom(DomainAppLanguage.default.code)
         }
 
         val snackBarHostState = remember { SnackbarHostState() }

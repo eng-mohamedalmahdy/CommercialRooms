@@ -13,7 +13,10 @@ import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import com.lightfeather.commercialrooms.MR
+import commercialrooms.composeapp.generated.resources.Res
+import commercialrooms.composeapp.generated.resources.cover
 import dev.icerock.moko.resources.compose.stringResource
+import org.jetbrains.compose.resources.painterResource
 import ui.composables.AdBanner
 import ui.composables.AppTopBar
 import ui.composables.PagerWithIndicatorAndTitle
@@ -25,29 +28,29 @@ fun HomePage() {
     val navigator = LocalNavigator.currentOrThrow
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState())) {
         AppTopBar(
-            leadingTitle = stringResource(MR.strings.welcome_back_user, "User")
+            leadingTitle = stringResource(MR.strings.welcome_back_user, "")
         )
         Spacer(Modifier.height(16.dp))
-        AdBanner(null, stringResource(MR.strings.ad_here))
+        AdBanner(painterResource(Res.drawable.cover), stringResource(MR.strings.ad_here))
         SignUpSuggestionCard {
             navigator.push(SignInPageScreen)
         }
         Spacer(Modifier.height(16.dp))
 
         PagerWithIndicatorAndTitle(
-            title = "News",
+            title = "آخر الأخبار",
             items = List(10) { Any() },
             onItemClick = {}
         )
         Spacer(Modifier.height(16.dp))
         PagerWithIndicatorAndTitle(
-            title = "News",
+            title = "آخر الأخبار",
             items = List(10) { Any() },
             onItemClick = {}
         )
         Spacer(Modifier.height(16.dp))
         PagerWithIndicatorAndTitle(
-            title = "News",
+            title = "آخر الأخبار",
             items = List(10) { Any() },
             onItemClick = {}
         )

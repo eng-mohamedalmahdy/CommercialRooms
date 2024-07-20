@@ -16,6 +16,6 @@ data class DomainAppLanguage(
             name = "العربية",
             flag = "https://flagcdn.com/w320/eg.png"
         )
-        val default = english
+        val default = arabic
     }
 }

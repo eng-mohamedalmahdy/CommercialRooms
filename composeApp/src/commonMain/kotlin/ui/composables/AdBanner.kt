@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.key.Key.Companion.M
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 
@@ -22,7 +23,8 @@ fun AdBanner(image: Any?, placeholder: String) {
         image?.let {
             AppImage(
                 it,
-                contentScale = ContentScale.FillBounds
+                contentScale = ContentScale.FillBounds,
+                modifier = Modifier.fillMaxSize()
             )
         }
             ?: Box(Modifier.fillMaxSize()) {

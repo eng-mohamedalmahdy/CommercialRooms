@@ -37,7 +37,7 @@ fun ShareYourFeedbackPage() {
         Modifier.fillMaxSize().verticalScroll(rememberScrollState())
     ) {
         AppTopBar(
-            leadingTitle = "Share your feedback",
+            leadingTitle = "شارك رأيك معنا",
             onBackPress = navigation::pop
         )
 
@@ -76,7 +76,7 @@ fun ShareYourFeedbackPage() {
         )
         Spacer(Modifier.height(8.dp))
         AppFilledButton(
-            "Send", onClick = {},
+            stringResource(MR.strings.confirm), onClick = {},
             modifier = Modifier.align(Alignment.CenterHorizontally)
         )
         Spacer(Modifier.height(150.dp))

@@ -4,6 +4,12 @@
     <string name="confirm">Confirm</string>
     <string name="ad_here">Ad Here</string>
     <string name="sign_up_to_enjoy">Sign up Now! to benefit from all of our services</string>
+    <string name="digital_services">Digital services</string>
+    <string name="public_services">Public services</string>
+    <string name="latest">Latest</string>
+    <string name="events">Events</string>
+    <string name="lens">Lens</string>
+    <string name="conferences">Conferences</string>
 
 
     <string name="preview">Preview</string>

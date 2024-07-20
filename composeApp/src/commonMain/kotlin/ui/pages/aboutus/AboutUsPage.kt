@@ -18,27 +18,28 @@ import com.lightfeather.commercialrooms.MR
 import dev.icerock.moko.resources.compose.stringResource
 import ui.composables.AppTopBar
 import ui.composables.CircleIndicatorAppTabRow
+import ui.entity.UiText
 
 @Composable
 fun AboutUsPage() {
     var selectedTab by remember { mutableStateOf(AboutUsTabs.entries.first()) }
     Column(Modifier.fillMaxSize()) {
         AppTopBar(
-            leadingTitle = stringResource(MR.strings.welcome_back_user, "User")
+            leadingTitle = stringResource(MR.strings.welcome_back_user, "")
         )
         CircleIndicatorAppTabRow(
             AboutUsTabs.entries,
-            AboutUsTabs.entries.map(AboutUsTabs::name),
+            AboutUsTabs.entries.map(AboutUsTabs::localizedName),
             selectedTab,
             onTabClick = { selectedTab = it }
         )
         Text(
-            "When We Talk",
+            "عندما نتحدث",
             style = MaterialTheme.typography.headlineMedium
         )
         Spacer(Modifier.height(200.dp))
         Text(
-            "When We Talk",
+            "عندما نتحدث",
             style = MaterialTheme.typography.headlineMedium
         )
         Spacer(Modifier.height(200.dp))
@@ -55,4 +56,15 @@ object AboutUsPageScreen : Screen {
 
 enum class AboutUsTabs {
     About, SupervisorWord, Vision
+}
+
+fun AboutUsTabs.localizedName(): String {
+    val res = when (this) {
+        AboutUsTabs.About -> MR.strings.about_us
+        AboutUsTabs.SupervisorWord -> MR.strings.our_mission
+        AboutUsTabs.Vision -> MR.strings.our_vision
+
+    }
+    return UiText.StringResource(res).asString()
+
 }

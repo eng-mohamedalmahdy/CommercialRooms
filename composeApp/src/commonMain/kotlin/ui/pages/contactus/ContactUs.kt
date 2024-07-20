@@ -36,7 +36,7 @@ fun ContactUsPage() {
         Modifier.fillMaxSize().verticalScroll(rememberScrollState())
     ) {
         AppTopBar(
-            leadingTitle = "Contact us",
+            leadingTitle = stringResource(MR.strings.contact_us),
             onBackPress = navigation::pop
         )
 
@@ -65,7 +65,7 @@ fun ContactUsPage() {
         )
         Spacer(Modifier.height(8.dp))
         AppFilledButton(
-            "Send", onClick = {},
+            stringResource(MR.strings.confirm), onClick = {},
             modifier = Modifier.align(Alignment.CenterHorizontally)
         )
         Spacer(Modifier.height(150.dp))

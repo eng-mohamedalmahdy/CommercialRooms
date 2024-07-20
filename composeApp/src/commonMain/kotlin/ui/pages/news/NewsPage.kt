@@ -33,6 +33,7 @@ import dev.icerock.moko.resources.compose.stringResource
 import ui.composables.AppImage
 import ui.composables.AppTopBar
 import ui.composables.CircleIndicatorAppTabRow
+import ui.entity.UiText
 
 @Composable
 fun NewsPage() {
@@ -41,25 +42,16 @@ fun NewsPage() {
     LazyColumn(Modifier.fillMaxSize()) {
         item {
             AppTopBar(
-                leadingTitle = stringResource(MR.strings.welcome_back_user, "User")
+                leadingTitle = stringResource(MR.strings.welcome_back_user, "")
             )
         }
         item {
-            TabRow(
-                selectedNewsTab.ordinal,
-                containerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.1f),
-                indicator = {
-
-                }
-            ) {
-
-                CircleIndicatorAppTabRow(
-                    NewsType.entries,
-                    NewsType.entries.map(NewsType::name),
-                    selectedNewsTab,
-                    onTabClick = { selectedNewsTab = it }
-                )
-            }
+            CircleIndicatorAppTabRow(
+                NewsType.entries,
+                NewsType.entries.map(NewsType::localizedName),
+                selectedNewsTab,
+                onTabClick = { selectedNewsTab = it }
+            )
         }
         items(news) {
             AppImage(
@@ -84,4 +76,14 @@ object NewsPageScreen : Screen {
 
 enum class NewsType {
     LATEST, EVENTS, LENS, CONFERENCES
+}
+
+fun NewsType.localizedName(): String {
+    val res = when (this) {
+        NewsType.LATEST -> MR.strings.latest
+        NewsType.EVENTS -> MR.strings.events
+        NewsType.LENS -> MR.strings.lens
+        NewsType.CONFERENCES -> MR.strings.conferences
+    }
+    return UiText.StringResource(res).asString()
 }
