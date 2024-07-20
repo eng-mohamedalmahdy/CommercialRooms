@@ -20,7 +20,7 @@ import ui.config.AppIcons
 @Composable
 fun SignUpSuggestionCard(onSignUpClick: () -> Unit) {
     Card(
-        Modifier.fillMaxWidth().padding(horizontal = 16.dp).height(130.dp)
+        Modifier.fillMaxWidth().padding(horizontal = 16.dp).height(150.dp)
     ) {
         Row(Modifier.fillMaxSize().padding(16.dp)) {
             AppImage(

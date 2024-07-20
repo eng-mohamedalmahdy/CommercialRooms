@@ -66,72 +66,72 @@ object Colors {
 private val appTypography
     @Composable get() = Typography(
         displayLarge = TextStyle(
-            fontFamily = robotoFontFamily,
+            fontFamily = cairoFontFamily,
             fontSize = 22.sp,
             fontWeight = FontWeight.Bold
         ),
         displayMedium = TextStyle(
-            fontFamily = robotoFontFamily,
+            fontFamily = cairoFontFamily,
             fontSize = 22.sp,
             fontWeight = FontWeight.Medium
         ),
         displaySmall = TextStyle(
-            fontFamily = robotoFontFamily,
+            fontFamily = cairoFontFamily,
             fontSize = 18.sp,
             fontWeight = FontWeight.Bold
         ),
         headlineLarge = TextStyle(
-            fontFamily = robotoFontFamily,
+            fontFamily = cairoFontFamily,
             fontSize = 18.sp,
             fontWeight = FontWeight.Medium
         ),
         headlineMedium = TextStyle(
-            fontFamily = robotoFontFamily,
+            fontFamily = cairoFontFamily,
             fontSize = 18.sp,
             fontWeight = FontWeight.Normal
         ),
         headlineSmall = TextStyle(
-            fontFamily = robotoFontFamily,
+            fontFamily = cairoFontFamily,
             fontSize = 16.sp,
             fontWeight = FontWeight.Medium
         ),
         titleLarge = TextStyle(
-            fontFamily = robotoFontFamily,
+            fontFamily = cairoFontFamily,
             fontSize = 14.sp,
             fontWeight = FontWeight.Medium
         ),
         titleMedium = TextStyle(
-            fontFamily = robotoFontFamily,
+            fontFamily = cairoFontFamily,
             fontSize = 14.sp,
             fontWeight = FontWeight.Normal
         ),
         bodyLarge = TextStyle(
-            fontFamily = robotoFontFamily,
+            fontFamily = cairoFontFamily,
             fontSize = 16.sp,
             fontWeight = FontWeight.Medium
         ),
         bodyMedium = TextStyle(
-            fontFamily = robotoFontFamily,
+            fontFamily = cairoFontFamily,
             fontSize = 16.sp,
             fontWeight = FontWeight.Normal
         ),
         bodySmall = TextStyle(
-            fontFamily = robotoFontFamily,
+            fontFamily = cairoFontFamily,
             fontSize = 14.sp,
             fontWeight = FontWeight.Normal
         ),
         labelLarge = TextStyle(
-            fontFamily = robotoFontFamily,
+            fontFamily = cairoFontFamily,
             fontSize = 10.sp,
             fontWeight = FontWeight.Normal
         ),
         labelMedium = TextStyle(
-            fontFamily = robotoFontFamily,
+            fontFamily = cairoFontFamily,
             fontSize = 10.sp,
             fontWeight = FontWeight.Thin
         ),
         labelSmall = TextStyle(
-            fontFamily = robotoFontFamily,
+            fontFamily = cairoFontFamily,
             fontSize = 9.sp,
             fontWeight = FontWeight.Normal
         )

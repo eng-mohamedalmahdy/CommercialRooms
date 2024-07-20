@@ -5,6 +5,14 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import commercialrooms.composeapp.generated.resources.Res
+import commercialrooms.composeapp.generated.resources.cairo_black
+import commercialrooms.composeapp.generated.resources.cairo_bold
+import commercialrooms.composeapp.generated.resources.cairo_extrabold
+import commercialrooms.composeapp.generated.resources.cairo_extralight
+import commercialrooms.composeapp.generated.resources.cairo_light
+import commercialrooms.composeapp.generated.resources.cairo_medium
+import commercialrooms.composeapp.generated.resources.cairo_regular
+import commercialrooms.composeapp.generated.resources.cairo_semibold
 import commercialrooms.composeapp.generated.resources.roboto_black
 import commercialrooms.composeapp.generated.resources.roboto_blackitalic
 import commercialrooms.composeapp.generated.resources.roboto_bold
@@ -61,4 +69,18 @@ val sfproFontFamily: FontFamily
         Font(Res.font.roboto_bolditalic, FontWeight.Bold, FontStyle.Italic),
         Font(Res.font.roboto_blackitalic, FontWeight.Black, FontStyle.Normal),
         Font(Res.font.sf_pro_black_italic, FontWeight.Black, FontStyle.Italic)
+    )
+
+
+val cairoFontFamily: FontFamily
+    @Composable
+    get() = FontFamily(
+        Font(Res.font.cairo_black, FontWeight.Black, FontStyle.Normal),
+        Font(Res.font.cairo_bold, FontWeight.Bold, FontStyle.Normal),
+        Font(Res.font.cairo_extrabold, FontWeight.ExtraBold, FontStyle.Normal),
+        Font(Res.font.cairo_extralight, FontWeight.ExtraLight, FontStyle.Normal),
+        Font(Res.font.cairo_light, FontWeight.Light, FontStyle.Normal),
+        Font(Res.font.cairo_medium, FontWeight.Medium, FontStyle.Normal),
+        Font(Res.font.cairo_regular, FontWeight.Normal, FontStyle.Normal),
+        Font(Res.font.cairo_semibold, FontWeight.SemiBold, FontStyle.Normal),
     )

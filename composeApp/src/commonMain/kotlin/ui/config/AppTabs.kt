@@ -47,7 +47,7 @@ fun AppTab.icon(): Any = when (this) {
 fun AppTab.localisedName(): String = when (this) {
     HOME -> stringResource(MR.strings.home)
     ABOUT_US -> stringResource(MR.strings.about_us)
-    NEWS -> stringResource(MR.strings.about_us)
+    NEWS -> stringResource(MR.strings.media_center)
     MORE -> stringResource(MR.strings.more)
     SERVICES -> stringResource(MR.strings.services)
 }
