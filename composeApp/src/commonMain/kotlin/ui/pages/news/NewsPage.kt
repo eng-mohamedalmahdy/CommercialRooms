@@ -25,10 +25,14 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
 import com.lightfeather.commercialrooms.MR
+import commercialrooms.composeapp.generated.resources.Res
+import commercialrooms.composeapp.generated.resources.test
+import dev.icerock.moko.resources.compose.painterResource
 import dev.icerock.moko.resources.compose.stringResource
 import ui.composables.AppImage
 import ui.composables.AppTopBar
@@ -55,11 +59,12 @@ fun NewsPage() {
         }
         items(news) {
             AppImage(
-                it,
+                org.jetbrains.compose.resources.painterResource(Res.drawable.test),
                 modifier = Modifier.padding(8.dp).fillMaxWidth().height(100.dp).clickable(
                     onClick = {},
                     role = Role.Image
-                ).background(MaterialTheme.colorScheme.primary.copy(alpha = 0.25f))
+                ).background(MaterialTheme.colorScheme.primary.copy(alpha = 0.25f)),
+                contentScale = ContentScale.FillBounds
             )
         }
         item {

@@ -39,9 +39,15 @@ fun ServicesPage() {
     val navigator = LocalNavigator.currentOrThrow
     var selectedService by remember { mutableStateOf(AppServices.DigitalServices) }
     val dummyServices by remember {
-        mutableStateOf(List(10) {
-            UiService(it.toString(), "خدمة #$it", it.toString())
-        })
+        mutableStateOf(
+            listOf(
+                UiService("", "شهادة تعديل", ""),
+                UiService("", "شهادة", ""),
+                UiService("", "شهادة", ""),
+                UiService("", "إصدار", ""),
+                UiService("", "خدمة", ""),
+            )
+        )
     }
     LazyVerticalGrid(
         GridCells.Fixed(3),
